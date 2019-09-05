@@ -1,26 +1,26 @@
 spring:
-    profiles:
-        active:
-        - dev
+  profiles:
+    active:
+      - dev
 ---
 server:
-    port: 10004
+  port: 10004
 spring:
-    profiles: dev 
+  profiles: dev 
     application:
-        name: microservice-config-client
+      name: microservice-config-client
 eureka:
-    client:
-        service-url:
-            defaultZone: http://192.168.1.101:10001/eureka,http://192.168.1.102:10001/eureka,http://192.168.1.103:10001/eureka
+  client:
+    service-url:
+      defaultZone: http://192.168.1.101:10001/eureka,http://192.168.1.102:10001/eureka,http://192.168.1.103:10001/eureka
 ---
 server:
-    port: 10005
+  port: 10005
 spring:
-    profiles: test 
+  profiles: test 
     application:
-        name: microservice-config-client
+      name: microservice-config-client
 eureka:
-    client:
-        service-url:
-            defaultZone: http://192.168.1.101:10001/eureka,http://192.168.1.102:10001/eureka,http://192.168.1.103:10001/eureka
+  client:
+    service-url:
+      defaultZone: http://192.168.1.101:10001/eureka,http://192.168.1.102:10001/eureka,http://192.168.1.103:10001/eureka
